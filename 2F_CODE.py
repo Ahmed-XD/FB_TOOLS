@@ -26,7 +26,8 @@ class TwoFactorAuthenticator:
         return users_2f_key
 
 if __name__ == "__main__":
-    two_factor_key = TwoFactorAuthenticator.get_2f_key_from_user()
-    authenticator = TwoFactorAuthenticator(two_factor_key)
-    code = authenticator.get_otp()
-    print("2F code:\x1b[1;92m", code)
+    while True:
+        two_factor_key = TwoFactorAuthenticator.get_2f_key_from_user()
+        authenticator = TwoFactorAuthenticator(two_factor_key)
+        code = authenticator.get_otp()
+        print("2F code:\x1b[1;92m", code)
