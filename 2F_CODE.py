@@ -2,32 +2,50 @@
 echo "Written by Ahmed Ali"
 
 """
+import requests
+import sys
 import os
-while True:
-    try:
-        from pyotp import TOTP as GET_OTP
-        os.system("clear")
-        break
-    except ImportError:
-        os.system("pip install pyotp")
-    
 
-class TwoFactorAuthenticator:
-    def __init__(self, two_factor_key):
-        self.two_factor_key = two_factor_key.replace(' ', '')
-        self.otp = GET_OTP(self.two_factor_key)
+class CodeGenerator:
+    def __init__(self):
+        self.white = "\x1b[1;97m"
+        self.green = "\x1b[1;92m"
+        self.reset = "\x1b[0m"
+        self.limit = 54
 
-    def get_otp(self):
-        return self.otp.now()
+    def clear_screen(self):
+        if os.name == 'nt':  # For Windows
+            os.system('cls')
+        else:  # For Linux and macOS
+            os.system('clear')
 
-    @staticmethod
-    def get_2f_key_from_user():
-        users_2f_key = input("Input your 2F key: ")
-        return users_2f_key
+    def divider(self):
+        print(f"{self.white}-" * self.limit)
+
+    def display_header(self):
+        self.divider()
+        print(f"{self.white}Made By Ahmed Ali")
+        print(f"{self.white}Enter 'exit' to exit the tool")
+        self.divider()
+
+    def get_code(self, key):
+        url = f"https://livedeadsegs.pythonanywhere.com/2F?key={key.replace(' ', '')}"
+        response = requests.get(url).text
+        return response
+
+    def run(self):
+        self.clear_screen()
+        self.display_header()
+
+        while True:
+            key = input(f"{self.white}Enter key : ")
+            if key == "exit":
+                sys.exit()
+            else:
+                code = self.get_code(key)
+                print(f"Code : {self.green}{code}{self.reset}")
+                self.divider()
 
 if __name__ == "__main__":
-    while True:
-        two_factor_key = TwoFactorAuthenticator.get_2f_key_from_user()
-        authenticator = TwoFactorAuthenticator(two_factor_key)
-        code = authenticator.get_otp()
-        print(f"2F code:\x1b[1;92m{code}\x1b[1;97m")
+    generator = CodeGenerator()
+    generator.run()
