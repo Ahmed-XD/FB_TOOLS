@@ -14,8 +14,7 @@ if users_choice == "1":
   os.system("./ID_CHK")
 elif users_choice == "2":
   os.system("clear")
-  os.system("chmod +x FRIEND_CHECKER")
-  os.system("./FRIEND_CHECKER")
+  os.system("python FRIEND*")
 elif users_choice == "3":
   os.system("python 2F*")
 elif users_choice == "4":
