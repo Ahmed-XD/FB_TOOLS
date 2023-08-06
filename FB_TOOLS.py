@@ -7,7 +7,7 @@ print('Join Our Facebook Group and support us')
 os.system('xdg-open https://m.facebook.com/groups/1247184652736578/')
 os.system('clear')
 print('-'*54)
-users_choice = input("\033[1;33mFB_TOOLS MADE BY AHMED ALI\n[1] CHECK CLONED ACCOUNTS LIVE OR DEAD\n[2] CHECk CLONED ACCOUNTS TOTAL FRIEND\n[3] GET 2F CODE [KEY]\n[4] GET GROUP INFO [MEMBER|GROUP TYPE]\n\nChoose : ")
+users_choice = input("\033[1;33mFB_TOOLS MADE BY AHMED ALI\n[1] CHECK CLONED ACCOUNTS LIVE OR DEAD\n[2] CHECk CLONED ACCOUNTS TOTAL FRIEND\n[3] GET 2F CODE [KEY]\n[4] GET GROUP INFO [MEMBER|GROUP TYPE]\n[5] AUTO 2F \n\nChoose : ")
 if users_choice == "1":
   os.system("clear")
   os.system("chmod +x ID_CHK")
