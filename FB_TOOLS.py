@@ -19,5 +19,7 @@ elif users_choice == "3":
   os.system("python 2F*")
 elif users_choice == "4":
   os.system("clear && python GROUP_FINDER.py")
+elif users_choice == "5":
+  os.system("clear && 2F_AUTO*")
 else:
   exit("Choose the right option")
