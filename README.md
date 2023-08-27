@@ -17,11 +17,10 @@ FB_TOOLS is a command-line tool developed by Ahmed Ali that provides various fun
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Donations](#donations)
-- [Contact](#contact)
-- [License](#license)
+- [Installation](##installation)
+- [Usage](##usage)
+- [Donations](##donations)
+- [Contact](##contact)
 
 ## Installation
 
