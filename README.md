@@ -50,6 +50,7 @@ Follow the on-screen prompts to choose from various functionalities.
 If you find this tool useful, consider supporting the developer by making a donation:
 
 BTC: bc1q9j4vsnq6sjvml56hj2vdu8cgdrvaq2t3l3uul3
+
 Ethereum: 0x52B2E81F3fA341f5745c1F23d51ceE6d013c005c
 
 ## Contact
