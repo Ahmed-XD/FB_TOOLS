@@ -23,7 +23,6 @@ FB_TOOLS is a command-line tool developed by Ahmed Ali that provides various fun
 - [Contact](#contact)
 
 ## Installation
-
 1. Clone the repository:
 
 
