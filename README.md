@@ -13,6 +13,7 @@ FB_TOOLS is a command-line tool developed by Ahmed Ali that provides various fun
 - Obtain 2-factor authentication codes (2F codes).
 - Retrieve group information, including member count and group type.
 - Automate 2-factor authentication (Auto 2F).
+- Auto delete Facebook IDs.
 - And more...
 
 ## Table of Contents
