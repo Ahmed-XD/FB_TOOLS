@@ -80,7 +80,7 @@ class TwoFactorCloner:
                 with open("/sdcard/wrong_pass.txt", 'a') as f:
                     f.write(element + '\n')
             else:
-                exit("Error" + data)
+                print("Error" + data)
 
         print(f"\033[1;37mTotal Checked {len(get_file_info)} uid\n2F added: \033[1;32m{str(self.ok)}\n\033[1;37m2F Failed: \033[1;31m{str(self.fail)}")
 
