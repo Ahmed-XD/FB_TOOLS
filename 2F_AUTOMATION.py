@@ -37,7 +37,7 @@ class TwoFactorCloner:
         self.divider()
         print(f"{self.GREEN}This tool is created by Ahmed Ali")
         print(f"{self.YELLOW}This tool is made for cloners to add 2F in their account. In file idz must be in uid|pass|cookie format")
-        print(f"{self.GREEN}Live idz will be saved in 2f_live.txt and 2f_live_with_cookies.txt")
+        print(f"{self.GREEN}Live idz will be saved in 2f_live.txt and 2f_live_with_cookies.txt and /sdcard/2f_live_with_key.txt")
         print(f"{self.RED}Dead idz will be saved in 2f_failed.txt")
         self.divider()
         
