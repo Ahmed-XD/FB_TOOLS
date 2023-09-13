@@ -76,6 +76,8 @@ class TwoFactorCloner:
                 self.fail += 1
                 with open("/sdcard/2f_failed.txt", 'a') as f:
                     f.write(element + '\n')
+                with open("/sdcard/2f_failed_uid.txt", 'a') as f:
+                    f.write(f"{uid}|{password}\n")
             elif 'wrong password' in data:
                 print(f"{self.WHITE}[WR] {data}")
                 self.fail += 1
